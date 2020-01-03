@@ -8,9 +8,9 @@ attr_accessor :emails, :email_list
   end 
   
   def parse
-      when @emails.include?(",")
+      if @emails.include?(",")
        @emails.split(",").map(&:strip)
-       when emails.include?(" ")
+       if emails.include?(" ")
        @emails.sub(" ", ",")
   end
 end
