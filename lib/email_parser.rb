@@ -7,11 +7,11 @@ attr_accessor :emails, :email_list
     parse
   end 
   
-  def parse
-      if @emails.include?(",")
+  case parse
+      when @emails.include?(",")
        @emails.split(",").map(&:strip)
-       elsif emails.include?(" ")
-       @emails.sub!(" ", ",")
+       when emails.include?(" ")
+       @emails.sub(" ", ",")
        end
   end
 end
