@@ -8,12 +8,10 @@ attr_accessor :emails, :email_list
   end 
   
   def parse
-    @emails.split /\s |,|/
-      # if @emails.include?(",")
-      # @emails.split(",").map(&:strip)
-      # elsif emails.include?(" ")
-      # binding.pry
-      # @emails.sub!(" ", ",")
-      # end
+      if @emails.include?(",")
+       @emails.split(",").map(&:strip)
+       elsif emails.include?(" ")
+       @emails.sub!(" ", ",")
+       end
   end
 end
