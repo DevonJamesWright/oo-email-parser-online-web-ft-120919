@@ -12,5 +12,5 @@ attr_accessor :emails, :email_list
        @emails.split(",").map(&:strip)
        when emails.include?(" ")
        @emails.sub(" ", ",")
-       end
   end
+end
