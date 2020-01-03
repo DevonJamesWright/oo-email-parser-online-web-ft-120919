@@ -9,7 +9,7 @@ attr_accessor :emails, :email_list
   
   def parse
       if @emails.include?(",")
-       @emails.split( /\s |,/).map(&:strip).uniq
+       @emails.split( /, | /).map(&:strip).uniq
        elsif emails.include?(" ")
        @emails.sub!(" ", ",")
        end
