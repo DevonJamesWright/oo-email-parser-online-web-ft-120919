@@ -14,4 +14,3 @@ attr_accessor :emails, :email_list
        @emails.sub(" ", ",")
        end
   end
-end
